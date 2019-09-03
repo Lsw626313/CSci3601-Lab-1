@@ -9,5 +9,19 @@ use float to make something locate itself on the right or left
 
 body{
     padding: 30px;
-    background-color: #aaaaaa;
+    background-color: #D9AFAA;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 925px) {
+  .pslo-courses-container {
+    display: flex;
+    flex-direction: row;
+    max-width: 53em;
+  }
+}
+
+#main-title {
+  color: #503B33;
 }
