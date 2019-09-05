@@ -8,20 +8,94 @@ use float to make something locate itself on the right or left
 */
 
 body{
-    padding: 30px;
-    background-color: #D9AFAA;
+  padding: 80px 15px 200px;
+  background-color: #D9AFAA;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-@media screen and (min-width: 925px) {
-  .pslo-courses-container {
+@media screen and (min-width: 900px) {
+  body {
+    padding-left: 0;
+    margin:0 auto;
+    align-items: normal;
     display: flex;
     flex-direction: row;
-    max-width: 53em;
+    max-width: 100em;
+  }
+
+  #main-title {
+    padding-top: 20px;
+    writing-mode: vertical-lr;
+    text-align: left;
+    white-space: nowrap;
+    font-size: 5rem
+  }
+
+  #validation {
+    position: absolute;
+    top: 1200px;
+    left: 0;
   }
 }
 
 #main-title {
   color: #503B33;
+  text-transform: uppercase;
 }
+
+#validation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  color: #D9AFAA;
+  background-image: linear-gradient( rgba(0,0,0,0), rgba(33,33,33,256));
+  margin: 0;
+  padding: 0;
+  padding-top: 50px;
+  width:  100%;
+}
+
+#style ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  /*background-color: #333;*/
+}
+
+.card-body {
+  padding: 100px;
+  padding-bottom: 30px;
+}
+
+#style li {
+  float: left;
+}
+
+#style li a {
+  display: block;
+  color: #333;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#style li a:hover {
+  background-color: #D9AFAA;
+}
+
+#style {
+  position: fixed;
+  background-image: linear-gradient(rgba(217,175,170,255), rgba(217,175,170,0));
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100px;
+  padding-top: 10px;
+}
+
