@@ -99,7 +99,8 @@ h2 {
   text-align: center;
   padding: 5px 16px;
   text-decoration: none;
-  font-size: 75%;
+  font-size: 95%;
+  white-space: nowrap
 }
 
 #style li a:hover {
@@ -114,7 +115,7 @@ h2 {
   right: 0;
   top: 0;
   height: 75px;
-  padding-top: 10px;
+  padding-top: 12px;
 }
 
 #courses>ul>li {
@@ -198,7 +199,7 @@ h2 {
 
   #validation {
     position: absolute;
-    top: 950px;
+    top: 1000px;
   }
 
   .card-body {
