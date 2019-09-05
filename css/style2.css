@@ -42,11 +42,13 @@ body{
 
 #main-title {
   color: rgb(95,63,58);
-  font-size: 3rem;
+  font-size: 60px;
   text-transform: uppercase;
   padding-left: 20px;
   padding-right: 20px;
-  padding-bottom: 150px;
+  padding-bottom: 50px;
+
+  font-weight: 100;
 }
 
 h2 {
@@ -68,6 +70,7 @@ h2 {
 
 .card-title {
   font-size: 1.5em;
+  font-style: italic;
 }
 
 .card-body {
@@ -96,6 +99,7 @@ h2 {
   text-align: center;
   padding: 5px 16px;
   text-decoration: none;
+  font-size:75%;
 }
 
 #style li a:hover {
@@ -127,10 +131,15 @@ h2 {
   font-size: 15px;
 }
 
+.name {
+  font-style: italic;
+}
+
 .pslo, #courses {
   line-height: 1.6;
   font-size: 16px;
 }
+
 #courses {
   margin-top: 30px;
   padding-top: 10px;
