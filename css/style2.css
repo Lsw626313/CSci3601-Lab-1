@@ -42,7 +42,7 @@ body{
 
 #main-title {
   color: rgb(95,63,58);
-  font-size: 60px;
+  font-size: 50px;
   text-transform: uppercase;
   padding-left: 20px;
   padding-right: 20px;
@@ -95,11 +95,11 @@ h2 {
 
 #style li a {
   display: block;
-  color: rgb(95,63,58);;
+  color: rgb(95, 63, 58);;
   text-align: center;
   padding: 5px 16px;
   text-decoration: none;
-  font-size:75%;
+  font-size: 75%;
 }
 
 #style li a:hover {
