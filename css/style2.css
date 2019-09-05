@@ -26,19 +26,14 @@ body{
   background-color: rgba(255,255,255,0.85);
   align-items: self-start;
   width: 100%;
-}
-
-.pslo-courses-container, .faculty-container {
   margin-bottom: 50px;
   border-radius: 25px;
 }
-
 
 .section h2, li {
   padding-right: 20px;
   padding-left: 20px;
 }
-
 
 .faculty-container img {
   max-width: 90%;
@@ -47,11 +42,13 @@ body{
 
 #main-title {
   color: rgb(95,63,58);
-  font-size: 3rem;
+  font-size: 50px;
   text-transform: uppercase;
   padding-left: 20px;
   padding-right: 20px;
-  padding-bottom: 150px;
+  padding-bottom: 50px;
+
+  font-weight: 100;
 }
 
 h2 {
@@ -73,6 +70,7 @@ h2 {
 
 .card-title {
   font-size: 1.5em;
+  font-style: italic;
 }
 
 .card-body {
@@ -97,10 +95,11 @@ h2 {
 
 #style li a {
   display: block;
-  color: rgb(95,63,58);;
+  color: rgb(95, 63, 58);;
   text-align: center;
   padding: 5px 16px;
   text-decoration: none;
+  font-size: 75%;
 }
 
 #style li a:hover {
@@ -132,10 +131,15 @@ h2 {
   font-size: 15px;
 }
 
+.name {
+  font-style: italic;
+}
+
 .pslo, #courses {
   line-height: 1.6;
   font-size: 16px;
 }
+
 #courses {
   margin-top: 30px;
   padding-top: 10px;
@@ -143,8 +147,13 @@ h2 {
   border-top-style: dotted;
 }
 
-
 @media screen and (min-width: 925px) {
+  @media screen and (min-height: 1290px) {
+    #validation {
+      bottom: 0;
+    }
+  }
+
   body {
     padding-left: 0;
     margin:0 auto;
