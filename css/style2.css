@@ -26,19 +26,14 @@ body{
   background-color: rgba(255,255,255,0.85);
   align-items: self-start;
   width: 100%;
-}
-
-.pslo-courses-container, .faculty-container {
   margin-bottom: 50px;
   border-radius: 25px;
 }
-
 
 .section h2, li {
   padding-right: 20px;
   padding-left: 20px;
 }
-
 
 .faculty-container img {
   max-width: 90%;
@@ -143,8 +138,13 @@ h2 {
   border-top-style: dotted;
 }
 
-
 @media screen and (min-width: 925px) {
+  @media screen and (min-height: 1290px) {
+    #validation {
+      bottom: 0;
+    }
+  }
+
   body {
     padding-left: 0;
     margin:0 auto;
