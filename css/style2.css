@@ -35,6 +35,16 @@ body{
   padding-left: 20px;
 }
 
+.major-element ul li {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.major-element ul {
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
 .faculty-container img {
   max-width: 90%;
   border-radius: 20px;
@@ -120,10 +130,6 @@ h2 {
   padding-top: 12px;
 }
 
-#courses>ul>li {
-  display: inline-block;
-}
-
 #faculty-list {
   margin-right: auto;
   margin-left: auto;
@@ -151,6 +157,11 @@ h2 {
 #courses {
   line-height: 1.6;
   font-size: 1em;
+  margin-top: 30px;
+  padding-top: 10px;
+  margin-bottom: 40px;
+  border-top-style: dotted;
+  border-top-color: rgb(220, 198, 215);
 }
 
 .pslo {
@@ -158,15 +169,8 @@ h2 {
   font-size: 1em;
 }
 
-#courses {
-  margin-top: 30px;
-  padding-top: 10px;
-  margin-bottom: 40px;
-  border-top-style: dotted;
-}
-
 @media screen and (min-width: 925px) {
-  @media screen and (min-height: 1290px) {
+  @media screen and (min-height: 1365px) {
     #validation {
       bottom: 0;
     }
@@ -178,7 +182,7 @@ h2 {
     align-items: normal;
     display: flex;
     flex-direction: row;
-    width: 53em;
+    width: 905px;
     background-attachment: scroll;
   }
 
@@ -188,6 +192,10 @@ h2 {
     align-items: self-start;
     width: auto;
     margin: 0;
+  }
+
+  .faculty-container {
+    width: 350px;
   }
 
   .faculty-container {
@@ -202,12 +210,8 @@ h2 {
   #main-title {
     border-bottom-left-radius: 25px;
     border-top-left-radius: 25px;
-
-    padding-top: 20px;
-    padding-bottom: 0;
     writing-mode: vertical-lr;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 20px 30px 0;
     margin-left: 0;
     margin-right: 0;
     text-align: left;
@@ -216,10 +220,10 @@ h2 {
 
   #validation {
     position: absolute;
-    top: 1000px;
+    top: 1050px;
   }
 
   .card-body {
-    width: 48em;
+    width: 840px;
   }
 }
