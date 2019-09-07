@@ -42,7 +42,7 @@ body{
 
 #main-title {
   color: rgb(95,63,58);
-  font-size: 50px;
+  font-size: 3.125em;
   text-transform: uppercase;
   padding-left: 20px;
   padding-right: 20px;
@@ -62,7 +62,7 @@ h2 {
   position: absolute;
   left: 0;
   color: rgb(244,224,240);
-  background-image: linear-gradient(rgba(0,0,0,0), rgba(33,33,33,256));
+  background-image: linear-gradient(rgba(0,0,0,0), rgba(45,30,35,0.95));
   margin-top: 0;
   padding-top: 0;
   width: 100%;
@@ -71,10 +71,12 @@ h2 {
 .card-title {
   font-size: 1.5em;
   font-style: italic;
+  color: rgb(255,245,248);
 }
 
 .card-body {
-  padding: 30px;
+  padding: 10px 30px 30px;
+  font-size: 0.8em;
 }
 
 #style ul {
@@ -99,7 +101,7 @@ h2 {
   text-align: center;
   padding: 5px 16px;
   text-decoration: none;
-  font-size: 95%;
+  font-size: 0.95em;
   white-space: nowrap
 }
 
@@ -122,23 +124,38 @@ h2 {
   display: inline-block;
 }
 
+#faculty-list {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 20px;
+}
+
+#faculty-list li {
+  align-self: center;
+}
+
 #faculty>ul>li {
   display: inline-block;
   margin-bottom: 10px;
-  font-size: 20px;
+  font-size: 1.25em;
 }
 
 .office {
-  font-size: 15px;
+  font-size: 0.75em;
 }
 
 .name {
   font-style: italic;
 }
 
-.pslo, #courses {
+#courses {
   line-height: 1.6;
-  font-size: 16px;
+  font-size: 1em;
+}
+
+.pslo {
+  line-height: 1.8;
+  font-size: 1em;
 }
 
 #courses {
