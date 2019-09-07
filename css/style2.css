@@ -110,6 +110,7 @@ h2 {
   color: rgb(95, 63, 58);;
   text-align: center;
   padding: 5px 16px;
+  margin: 8px;
   text-decoration: none;
   font-size: 0.95em;
   white-space: nowrap
@@ -118,6 +119,7 @@ h2 {
 #style li a:hover {
   background-color: rgb(239, 219, 235);
   border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 #style {
@@ -127,7 +129,7 @@ h2 {
   right: 0;
   top: 0;
   height: 75px;
-  padding-top: 12px;
+  padding-top: 4px;
 }
 
 #faculty-list {
@@ -170,12 +172,6 @@ h2 {
 }
 
 @media screen and (min-width: 925px) {
-  @media screen and (min-height: 1365px) {
-    #validation {
-      bottom: 0;
-    }
-  }
-
   body {
     padding-left: 0;
     margin:0 auto;
@@ -225,5 +221,12 @@ h2 {
 
   .card-body {
     width: 840px;
+  }
+
+  @media screen and (min-height: 1365px) {
+    #validation {
+      top: unset;
+      bottom: 0;
+    }
   }
 }
