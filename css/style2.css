@@ -76,7 +76,6 @@ h2 {
 
 .card-body {
   padding: 10px 30px 30px;
-  font-size: 0.8em;
 }
 
 #style ul {
@@ -220,6 +219,6 @@ h2 {
   }
 
   .card-body {
-    width: 53em;
+    width: 48em;
   }
 }
