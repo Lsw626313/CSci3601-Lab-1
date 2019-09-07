@@ -38,6 +38,7 @@ body{
 .faculty-container img {
   max-width: 90%;
   border-radius: 20px;
+  margin-top: 5px;
 }
 
 #main-title {
