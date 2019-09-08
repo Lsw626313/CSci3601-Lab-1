@@ -9,25 +9,47 @@ use float to make something locate itself on the right or left
 
 body{
   padding: 50px 0 200px;
-  background-color: rgb(244,224,240);
+  background-color: rgb(238,204,236);
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: center;
   margin: 0;
-
   background-image: url("http://pluspng.com/img-png/sakura-flower-png-hd-sakura-flower-1-4288.jpg");
   background-repeat: repeat-y;
   background-attachment: fixed;
+  transition: padding-top 1.5s;
+  transition-timing-function: ease-out;
+}
+
+body:after {
+  opacity: 1;
+  content: "";
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  display: block;
+  background-color: rgb(246,226,242);
+  animation: ease fadein 1.5s forwards;
+  animation-delay: 1.5s;
+}
+
+@keyframes fadein {
+  from {opacity: 1}
+  to {opacity: 0.35}
 }
 
 .pslo-courses-container, .faculty-container {
   padding: 0;
-  background-color: rgba(255,255,255,0.85);
+  background-color: rgba(255,255,255,0.9);
   align-items: self-start;
   width: 100%;
   margin-bottom: 50px;
   border-radius: 25px;
+  box-shadow: 0 10px 100px grey;
 }
 
 .section h2, li {
@@ -35,9 +57,20 @@ body{
   padding-left: 20px;
 }
 
-.faculty-container img {
+.major-element ul li {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.major-element ul {
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+img {
   max-width: 90%;
-  border-radius: 20px;
+  border-radius: 10%;
+  margin-top: 5px;
 }
 
 #main-title {
@@ -46,13 +79,13 @@ body{
   text-transform: uppercase;
   padding-left: 20px;
   padding-right: 20px;
-  padding-bottom: 50px;
-
+  padding-bottom: 40px;
   font-weight: 100;
 }
 
 h2 {
   color: rgb(95,63,58);
+  font-size: 24px;
 }
 
 #validation {
@@ -62,19 +95,33 @@ h2 {
   position: absolute;
   left: 0;
   color: rgb(244,224,240);
-  background-image: linear-gradient(rgba(0,0,0,0), rgba(33,33,33,256));
+  background-image: linear-gradient(rgba(0,0,0,0), rgba(45,30,35,0.95));
   margin-top: 0;
   padding-top: 0;
   width: 100%;
 }
 
-.card-title {
-  font-size: 1.5em;
+h6, #validation p, #validation a {
+  text-shadow: 0 5px 20px rgb(50,50,50);
+  font-size: 16px;
+}
+
+h6 {
+  font-size: 20px;
   font-style: italic;
 }
 
 .card-body {
-  padding: 30px;
+  padding: 10px 30px 30px;
+}
+
+.card-text a {
+  color: #ffbbfa;
+  transition: .2s;
+}
+
+.card-text a:hover {
+  color: #a896ff;
 }
 
 #style ul {
@@ -82,43 +129,54 @@ h2 {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
 }
 
+#style {
+  position: fixed;
+  background-image: linear-gradient(rgb(246, 226, 242), rgba(0,0,0,0));
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 75px;
+  padding-top: 4px;
+  padding-bottom: 20px;
+}
+
 #style li {
-  float: left;
+  padding: 0 15px;
 }
 
 #style li a {
   display: block;
   color: rgb(95, 63, 58);;
   text-align: center;
-  padding: 5px 16px;
+  padding: 4px 16px;
+  margin: 8px;
   text-decoration: none;
-  font-size: 75%;
+  font-size: 16px;
+  white-space: nowrap;
+  border-radius: 15px;
+  transition: background-color .2s, box-shadow .2s;
+  transition-timing-function: ease-out;
+}
+
+#style li:nth-child(2) a {
+  color: rgba(155, 95, 118, 0.76);;
+  background-color: rgba(255, 245, 253, 0.95);
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.1);
 }
 
 #style li a:hover {
-  background-color: rgb(239, 219, 235);
-  border-radius: 15px;
+  background-color: rgb(255, 245, 253);
+  box-shadow: 0 3px 5px 0 rgba(0,0,0,0.2);
 }
 
-#style {
-  position: fixed;
-  background-image: linear-gradient(rgba(244,224,240,255), rgba(0,0,0,0));
-  left: 0;
-  right: 0;
-  top: 0;
-  height: 75px;
-  padding-top: 10px;
-}
-
-#courses>ul>li {
-  display: inline-block;
+#faculty-list {
+  padding-left: 20px;
 }
 
 #faculty>ul>li {
@@ -128,40 +186,38 @@ h2 {
 }
 
 .office {
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .name {
   font-style: italic;
 }
 
-.pslo, #courses {
+#courses {
   line-height: 1.6;
   font-size: 16px;
-}
-
-#courses {
   margin-top: 30px;
   padding-top: 10px;
   margin-bottom: 40px;
   border-top-style: dotted;
+  border-top-color: rgb(220, 198, 215);
+}
+
+.pslo {
+  line-height: 1.8;
+  font-size: 16px;
 }
 
 @media screen and (min-width: 925px) {
-  @media screen and (min-height: 1290px) {
-    #validation {
-      bottom: 0;
-    }
-  }
-
   body {
     padding-left: 0;
     margin:0 auto;
     align-items: normal;
     display: flex;
     flex-direction: row;
-    width: 53em;
+    width: 905px;
     background-attachment: scroll;
+    height: 1000px;
   }
 
   h1, .pslo-courses-container, .faculty-container {
@@ -170,6 +226,23 @@ h2 {
     align-items: self-start;
     width: auto;
     margin: 0;
+    box-shadow: unset;
+  }
+
+  body:before {
+    z-index: -1;
+    content: "";
+    display:block;
+    height: 950px;
+    width: 905px;
+    position: absolute;
+    padding-top: 50px;
+    border-radius: 25px;
+    box-shadow: 0 0 100px grey;
+  }
+
+  .faculty-container {
+    width: 350px;
   }
 
   .faculty-container {
@@ -184,12 +257,8 @@ h2 {
   #main-title {
     border-bottom-left-radius: 25px;
     border-top-left-radius: 25px;
-
-    padding-top: 20px;
-    padding-bottom: 0;
     writing-mode: vertical-lr;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 20px 30px 0;
     margin-left: 0;
     margin-right: 0;
     text-align: left;
@@ -198,10 +267,21 @@ h2 {
 
   #validation {
     position: absolute;
-    top: 950px;
+    top: 1050px;
   }
 
   .card-body {
-    width: 53em;
+    width: 840px;
+  }
+
+  #style li {
+    padding: 0 25px;
+  }
+
+  @media screen and (min-height: 1360px) {
+    #validation {
+      top: unset;
+      bottom: 0;
+    }
   }
 }
