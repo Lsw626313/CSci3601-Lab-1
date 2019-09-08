@@ -7,6 +7,10 @@ use float to make something locate itself on the right or left
 
 */
 
+html {
+  scroll-behavior: smooth;
+}
+
 body{
   padding: 50px 0 200px;
   background-color: rgb(238,204,236);
@@ -33,13 +37,13 @@ body:after {
   height: 100%;
   display: block;
   background-color: rgb(246,226,242);
-  animation: ease fadein 1.5s forwards;
+  animation: ease fadein 1s forwards;
   animation-delay: 1.5s;
 }
 
 @keyframes fadein {
   from {opacity: 1}
-  to {opacity: 0.35}
+  to {opacity: 0.2}
 }
 
 .pslo-courses-container, .faculty-container {
@@ -49,7 +53,7 @@ body:after {
   width: 100%;
   margin-bottom: 50px;
   border-radius: 25px;
-  box-shadow: 0 10px 100px grey;
+  box-shadow: 0 0 75px grey;
 }
 
 .section h2, li {
@@ -101,8 +105,8 @@ h2 {
   width: 100%;
 }
 
-h6, #validation p, #validation a {
-  text-shadow: 0 5px 20px rgb(50,50,50);
+h6, #validation p + a {
+  text-shadow: 0 0 50px rgb(50,50,50);
   font-size: 16px;
 }
 
@@ -238,7 +242,7 @@ h6 {
     position: absolute;
     padding-top: 50px;
     border-radius: 25px;
-    box-shadow: 0 0 100px grey;
+    box-shadow: 0 0 75px grey;
   }
 
   .faculty-container {
