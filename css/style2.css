@@ -32,14 +32,14 @@ body:after {
   right: 0;
   height: 100%;
   display: block;
-  background-color: rgb(246, 226, 242);
-  animation: fadein .5s forwards;
+  background-color: rgb(246,226,242);
+  animation: ease fadein 1.5s forwards;
   animation-delay: 1.5s;
 }
 
 @keyframes fadein {
   from {opacity: 1}
-  to {opacity: 0}
+  to {opacity: 0.35}
 }
 
 .pslo-courses-container, .faculty-container {
