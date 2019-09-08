@@ -8,17 +8,19 @@ use float to make something locate itself on the right or left
 */
 
 body {
-  padding: 30px;
+  padding: 10px;
   background-image: url("https://www.insidehighered.com/sites/default/server_files/media/iStock-636447976.jpg");
   display: flex;
   flex-direction: column;
   justify-content: center;
+  color: white;
 }
 #main-title{
   margin-top: 50px;
 
 }
 h1 {
+  color: white;
   font-style: italic;
   font-size: 50px;
   text-shadow: 2px 3px gray;
@@ -28,13 +30,20 @@ h2 {
   text-align: left;
   font-family: "Lucida Console", Lucida, monospace;
   font-style: italic;
+  text-shadow: 1.5px 2px  gray;
 }
 
+li {
+  font-size: 14px;
+  font-family: "Lucida Console", Lucida, monospace;
+  text-shadow: 1px 2px gray;
+
+}
 .section {
-  border-radius: 25px;
-  padding: 20px;
+  border-radius: 5px;
+  padding: 5px;
   border: 5px solid;
-  margin: 10px;
+  margin: 5px;
   max-width: 48em;
 }
 
@@ -51,22 +60,21 @@ h2 {
   }
 }
 #courses {
-  background: #18A4D7;
+ background: #18A4D7;
 }
 #faculty {
   background: #E814F7;
+  float: left;
 }
 
-.faculty-container {
-  margin-left: 100px;
+.faculty-list {
   width: 25%;
-  overflow: auto;
   display: table;
   clear: both;
 }
 
 #validation {
-  background: #F71414;
+  //background: #F71414;
 }
 
 #style {
@@ -76,23 +84,29 @@ h2 {
   top: 0;
   height: 50px;
   padding: 20px;
-
 }
 #style li {
   float: left;
-  text-shadow: 1px 1px gray;
+  text-shadow: 1px 2px gray;
   font-size: 18px;
+}
+
+@media screen and (max-width: 925px) {
+  #style li {
+    font-size: 12px;
+  }
 }
 #style li a:link {
   text-decoration: none;
 }
 #style li a:hover {
   color: #F71414;
+  cursor: pointer;
 }
 
 #style li a {
   display: block;
-  color: black;
+  color: white;
   text-align: left;
   padding: 14px 16px; /*this adds some spacing around the items in our "nav bar" */
   text-decoration: none;
@@ -108,8 +122,10 @@ h2 {
 #faculty-list {
   padding-left: 100px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
 }
+
+
