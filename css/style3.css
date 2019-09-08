@@ -9,21 +9,25 @@ use float to make something locate itself on the right or left
 
 body {
   padding: 30px;
-  background-color: #FFDE7A;
+  background-image: url("https://www.insidehighered.com/sites/default/server_files/media/iStock-636447976.jpg");
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-
-
 }
 #main-title{
-  margin-top: 100px;
+  margin-top: 50px;
 
 }
-
+h1 {
+  font-style: italic;
+  font-size: 50px;
+  text-shadow: 2px 3px gray;
+}
 h2 {
   color: white;
+  text-align: left;
+  font-family: "Lucida Console", Lucida, monospace;
+  font-style: italic;
 }
 
 .section {
@@ -55,7 +59,10 @@ h2 {
 
 .faculty-container {
   margin-left: 100px;
-  flex-direction: row-reverse;
+  width: 25%;
+  overflow: auto;
+  display: table;
+  clear: both;
 }
 
 #validation {
@@ -63,16 +70,46 @@ h2 {
 }
 
 #style {
-  position: fixed;
+  position: absolute;
   left: 0;
-  right: 500px;
+  right: 0;
   top: 0;
   height: 50px;
   padding: 20px;
 
 }
-
 #style li {
   float: left;
+  text-shadow: 1px 1px gray;
+  font-size: 18px;
+}
+#style li a:link {
+  text-decoration: none;
+}
+#style li a:hover {
+  color: #F71414;
+}
 
+#style li a {
+  display: block;
+  color: black;
+  text-align: left;
+  padding: 14px 16px; /*this adds some spacing around the items in our "nav bar" */
+  text-decoration: none;
+}
+
+#style ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#faculty-list {
+  padding-left: 100px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
 }
