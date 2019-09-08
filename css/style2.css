@@ -22,14 +22,14 @@ body{
   background-image: url("http://pluspng.com/img-png/sakura-flower-png-hd-sakura-flower-1-4288.jpg");
   background-repeat: repeat-y;
   background-attachment: fixed;
-  transition: padding-top 1.5s;
+  transition: padding-top 1s;
   transition-timing-function: ease-out;
 }
 
 body:after {
-  opacity: 1;
   content: "";
-  z-index: -1;
+  opacity: 1;
+  z-index: -2;
   position: fixed;
   top: 0;
   left: 0;
@@ -37,8 +37,7 @@ body:after {
   height: 100%;
   display: block;
   background-color: rgb(246,226,242);
-  animation: ease fadein 1s forwards;
-  animation-delay: 1.5s;
+  animation: fadein .5s ease .5s forwards;
 }
 
 @keyframes fadein {
@@ -140,6 +139,7 @@ h6 {
 }
 
 #style {
+  z-index: 2;
   position: fixed;
   background-image: linear-gradient(rgb(246, 226, 242), rgba(0,0,0,0));
   left: 0;
