@@ -9,7 +9,7 @@ use float to make something locate itself on the right or left
 
 body{
   padding: 50px 0 200px;
-  background-color: rgb(238, 204, 236);
+  background-color: rgb(238,204,236);
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -20,13 +20,26 @@ body{
   background-attachment: fixed;
   transition: padding-top 1.5s;
   transition-timing-function: ease-out;
-  animation-name: fadein;
-  animation-duration: 1.5s;
+}
+
+body:after {
+  opacity: 1;
+  content: "";
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  display: block;
+  background-color: rgb(246, 226, 242);
+  animation: fadein .5s forwards;
+  animation-delay: 1.5s;
 }
 
 @keyframes fadein {
-  from {opacity: 0;}
-  to {opacity: 1}
+  from {opacity: 1}
+  to {opacity: 0}
 }
 
 .pslo-courses-container, .faculty-container {
@@ -36,7 +49,7 @@ body{
   width: 100%;
   margin-bottom: 50px;
   border-radius: 25px;
-  box-shadow: 0 0 100px grey;
+  box-shadow: 0 10px 100px grey;
 }
 
 .section h2, li {
@@ -66,7 +79,7 @@ img {
   text-transform: uppercase;
   padding-left: 20px;
   padding-right: 20px;
-  padding-bottom: 50px;
+  padding-bottom: 40px;
   font-weight: 100;
 }
 
@@ -89,14 +102,13 @@ h2 {
 }
 
 h6, #validation p, #validation a {
-  text-shadow: 0 5px 20px rgb(50, 50, 50);
+  text-shadow: 0 5px 20px rgb(50,50,50);
   font-size: 16px;
 }
 
 h6 {
   font-size: 20px;
   font-style: italic;
-  color: rgb(255,245,248);
 }
 
 .card-body {
@@ -105,11 +117,11 @@ h6 {
 
 .card-text a {
   color: #ffbbfa;
-  transition: 1s;
+  transition: .2s;
 }
 
 .card-text a:hover {
-  color: #ff78a5;
+  color: #a896ff;
 }
 
 #style ul {
@@ -142,10 +154,10 @@ h6 {
   display: block;
   color: rgb(95, 63, 58);;
   text-align: center;
-  padding: 5px 16px;
+  padding: 4px 16px;
   margin: 8px;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 16px;
   white-space: nowrap;
   border-radius: 15px;
   transition: background-color .2s, box-shadow .2s;
@@ -218,6 +230,7 @@ h6 {
   }
 
   body:before {
+    z-index: -1;
     content: "";
     display:block;
     height: 950px;
