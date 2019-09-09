@@ -8,13 +8,12 @@ use float to make something locate itself on the right or left
 */
 
 /*
- * Use scroll-behavior: smooth to add smooth scroll effect when click on nevigation bars
+ * Use scroll-behavior to add smooth scroll effect when click on navigation bars
  * to back to the top
  */
 html {
   scroll-behavior: smooth;
 }
-
 
 /*
  * 1) Use url() to import background-image and set the background color to a similar color from the image
@@ -50,24 +49,23 @@ body:after {
   height: 100%;
   display: block;
   background-color: rgb(246,226,242);
-  animation: fadein .5s ease .5s forwards;
+  animation: fadein .5s ease 1s forwards;
 }
 
 /*
- * Create a fadein animation which change the opacity of an item
+ * Create a fadein animation by changing the opacity of an item
  */
 @keyframes fadein {
   from {opacity: 1}
-  to {opacity: 0.2}
+  to {opacity: 0.15}
 }
 
 /*
- * Use box-shadow to add box-shadows to the body content
+ * Use box-shadow to add shadows to the pslo, course and faculty containers
  */
 .pslo-courses-container, .faculty-container {
   padding: 0;
   background-color: rgba(255,255,255,0.9);
-  align-items: self-start;
   width: 100%;
   margin-bottom: 50px;
   border-radius: 25px;
@@ -115,6 +113,7 @@ h2 {
 
 /*
  * Use linear-gradient to create a transparent gradient grey effect on the validation card
+ * Apply flex display to centralize the validation card at the bottom of the page
  */
 #validation {
   display: flex;
@@ -327,7 +326,7 @@ h6 {
   }
 
   /*
-   * Make the main title vertical using writing-mode vertical-lr and disable line wrap
+   * Make the main title vertical using writing-mode vertical-lr
    */
   #main-title {
     border-bottom-left-radius: 25px;
