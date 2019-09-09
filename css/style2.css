@@ -264,7 +264,7 @@ h6 {
 }
 
 /*
- * Use a top border to as a cut-off line splitting the pslo and course sections
+ * Use a top border as a cut-off line splitting the pslo and course sections
  */
 #courses {
   line-height: 1.6;
