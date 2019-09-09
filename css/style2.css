@@ -7,11 +7,21 @@ use float to make something locate itself on the right or left
 
 */
 
+/*
+ * Use scroll-behavior: smooth to add smooth scroll effect when click on nevigation bars
+ * to back to the top
+ */
 html {
   scroll-behavior: smooth;
 }
 
-body{
+
+/*
+ * 1) Use url() to import background-image and set the background color to a similar color from the image
+ * 2) Enable transition effect on top padding which creates a shift-down animation when the page is loaded
+ * 3) Set margin 0 so the content border is full screen wide when the screen is less than 925px wide
+ */
+body {
   padding: 50px 0 200px;
   background-color: rgb(238,204,236);
   display: flex;
@@ -26,6 +36,9 @@ body{
   transition-timing-function: ease-out;
 }
 
+/*
+ * Use body:after to generate a rectangle and use it to create an fadein load animation
+ */
 body:after {
   content: "";
   opacity: 1;
@@ -40,11 +53,17 @@ body:after {
   animation: fadein .5s ease .5s forwards;
 }
 
+/*
+ * Create a fadein animation which change the opacity of an item
+ */
 @keyframes fadein {
   from {opacity: 1}
   to {opacity: 0.2}
 }
 
+/*
+ * Use box-shadow to add box-shadows to the body content
+ */
 .pslo-courses-container, .faculty-container {
   padding: 0;
   background-color: rgba(255,255,255,0.9);
@@ -76,6 +95,9 @@ img {
   margin-top: 5px;
 }
 
+/*
+ * Uppercase title and set the font weight to a thin value
+ */
 #main-title {
   color: rgb(95,63,58);
   font-size: 50px;
@@ -91,6 +113,9 @@ h2 {
   font-size: 24px;
 }
 
+/*
+ * Use linear-gradient to create a transparent gradient grey effect on the validation card
+ */
 #validation {
   display: flex;
   flex-direction: column;
@@ -104,11 +129,17 @@ h2 {
   width: 100%;
 }
 
+/*
+ * Add text shadow on the validation card
+ */
 h6, #validation p + a {
   text-shadow: 0 0 50px rgb(50,50,50);
   font-size: 16px;
 }
 
+/*
+ * Italic the validation title
+ */
 h6 {
   font-size: 20px;
   font-style: italic;
@@ -118,6 +149,9 @@ h6 {
   padding: 10px 30px 30px;
 }
 
+/*
+ * Change validation links colors and add transition effect when mouse hovers
+ */
 .card-text a {
   color: #ffbbfa;
   transition: .2s;
@@ -127,6 +161,9 @@ h6 {
   color: #a896ff;
 }
 
+/*
+ * Centralize navigation bar buttons
+ */
 #style ul {
   display: flex;
   flex-direction: row;
@@ -138,6 +175,9 @@ h6 {
   overflow: hidden;
 }
 
+/*
+ * Add transparent gradient background to the navigation bar
+ */
 #style {
   z-index: 2;
   position: fixed;
@@ -154,6 +194,10 @@ h6 {
   padding: 0 15px;
 }
 
+/*
+ * 1) Create rounded buttons to the navigation bar (invisible when not hovered)
+ * 2) add hover transition effect to navigation bar buttons
+ */
 #style li a {
   display: block;
   color: rgb(95, 63, 58);;
@@ -168,14 +212,20 @@ h6 {
   transition-timing-function: ease-out;
 }
 
+/*
+ * Use nth-child to create a always-selected effect on the second style button
+ */
 #style li:nth-child(2) a {
-  color: rgba(155, 95, 118, 0.76);;
-  background-color: rgba(255, 245, 253, 0.95);
+  color: rgba(155,95,118,0.76);;
+  background-color: rgba(255,245,253,0.95);
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.1);
 }
 
+/*
+ * Display buttons to the navigation bar with a shadow with hovered
+ */
 #style li a:hover {
-  background-color: rgb(255, 245, 253);
+  background-color: rgb(255,245,253);
   box-shadow: 0 3px 5px 0 rgba(0,0,0,0.2);
 }
 
@@ -204,7 +254,7 @@ h6 {
   padding-top: 10px;
   margin-bottom: 40px;
   border-top-style: dotted;
-  border-top-color: rgb(220, 198, 215);
+  border-top-color: rgb(220,198,215);
 }
 
 .pslo {
@@ -213,6 +263,12 @@ h6 {
 }
 
 @media screen and (min-width: 925px) {
+  /*
+   * When the screen is more than 925px wide
+   * 1) Change flex-direction to row to create a different body layout
+   * 2) Enable background image scroll
+   * 3) Fix body height to avoid content arrangement error due to page zoom setting
+   */
   body {
     padding-left: 0;
     margin:0 auto;
@@ -224,6 +280,10 @@ h6 {
     height: 1000px;
   }
 
+  /*
+   * Because on wide screen the body box is made of different sub content boxes,
+   * the old shadows cannot be used, disable old content shadows on wide screen
+   */
   h1, .pslo-courses-container, .faculty-container {
     padding: 0;
     background-color:rgba(255,255,255,0.9);
@@ -233,6 +293,10 @@ h6 {
     box-shadow: unset;
   }
 
+  /*
+   * Use body:before to replace old shadows with a universal shadow of a blank rounded rectangle
+   * which covers all parts of body contents on wide screen
+   */
   body:before {
     z-index: -1;
     content: "";
@@ -249,6 +313,10 @@ h6 {
     width: 350px;
   }
 
+  /*
+   * Reset border radius to faculty container and courses container which make up to a big
+   * rounded rectangle background
+   */
   .faculty-container {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
@@ -258,6 +326,9 @@ h6 {
     border-radius: 0;
   }
 
+  /*
+   * Make the main title vertical using writing-mode vertical-lr and disable line wrap
+   */
   #main-title {
     border-bottom-left-radius: 25px;
     border-top-left-radius: 25px;
@@ -269,6 +340,9 @@ h6 {
     white-space: nowrap;
   }
 
+  /*
+   * Use absolute position to the validation card to make it to the bottom of the page
+   */
   #validation {
     position: absolute;
     top: 1050px;
@@ -283,6 +357,10 @@ h6 {
   }
 
   @media screen and (min-height: 1360px) {
+    /*
+     * When the screen is more than 1360px tall (and more than 925px wide),
+     * stick the validation card to the bottom of the page
+     */
     #validation {
       top: unset;
       bottom: 0;
