@@ -5,6 +5,9 @@ use . in front of the name of a class of things from your html page
 use , to separate a list of things that have some shared css rule
 use float to make something locate itself on the right or left
 
+note:
+rules to grade are bookmarked from 1 to 5
+grouping, nesting, id and class used are bookmarked from A to E
 */
 
 /*
@@ -16,9 +19,11 @@ html {
 }
 
 /*
- * 1) Use url() to import background-image and set the background color to a similar color from the image
- * 2) Enable transition effect on top padding which creates a shift-down animation when the page is loaded
- * 3) Set margin 0 so the content border is full screen wide when the screen is less than 925px wide
+ * Please grade this rule (1)
+ * 1) Use url() to import background-image
+ * 2) Set the background color to a similar color from the image
+ * 3) Enable transition effect on top padding to create a shift-down load animation
+ * 4) Set margin 0 so the content border is full screen wide when the screen is narrow
  */
 body {
   padding: 50px 0 200px;
@@ -36,7 +41,9 @@ body {
 }
 
 /*
- * Use body:after to generate a rectangle and use it to create an fadein load animation
+ * Please grade this rule (2)
+ * 1) Use body:after to generate a rectangle between the content and background image
+ * 2) Use the rectangle to create an fadein load animation
  */
 body:after {
   content: "";
@@ -62,6 +69,7 @@ body:after {
 
 /*
  * Use box-shadow to add shadows to the pslo, course and faculty containers
+ * Class and grouping used here
  */
 .pslo-courses-container, .faculty-container {
   padding: 0;
@@ -112,8 +120,10 @@ h2 {
 }
 
 /*
- * Use linear-gradient to create a transparent gradient grey effect on the validation card
- * Apply flex display to centralize the validation card at the bottom of the page
+ * Please grade this rule (3)
+ * 1) Use linear-gradient to create a transparent gradient grey effect on the validation card
+ * 2) Set the width of validation card full screen wide
+ * 3) Apply flex display to centralize the validation card at the bottom of the page
  */
 #validation {
   display: flex;
@@ -130,6 +140,7 @@ h2 {
 
 /*
  * Add text shadow on the validation card
+ * Grouping, nesting and id used here
  */
 h6, #validation p + a {
   text-shadow: 0 0 50px rgb(50,50,50);
@@ -150,6 +161,7 @@ h6 {
 
 /*
  * Change validation links colors and add transition effect when mouse hovers
+ * Class and nesting used here
  */
 .card-text a {
   color: #ffbbfa;
@@ -162,6 +174,7 @@ h6 {
 
 /*
  * Centralize navigation bar buttons
+ * ID and nesting used here
  */
 #style ul {
   display: flex;
@@ -194,7 +207,8 @@ h6 {
 }
 
 /*
- * 1) Create rounded buttons to the navigation bar (invisible when not hovered)
+ * Please grade this rule (4)
+ * 1) Create rounded buttons to the navigation bar visible when hovered
  * 2) add hover transition effect to navigation bar buttons
  */
 #style li a {
@@ -212,7 +226,10 @@ h6 {
 }
 
 /*
- * Use nth-child to create a always-selected effect on the second style button
+ * Please grade this rule (5)
+ * 1) Use nth-child to create a always-selected effect on the second style button
+ * 2) Change text and background color of the button and add shadow effect
+ * 3) Hover transition animation is still enabled on the button
  */
 #style li:nth-child(2) a {
   color: rgba(155,95,118,0.76);;
@@ -263,10 +280,10 @@ h6 {
 
 @media screen and (min-width: 925px) {
   /*
-   * When the screen is more than 925px wide
+   * When the screen is more than 925px wide:
    * 1) Change flex-direction to row to create a different body layout
    * 2) Enable background image scroll
-   * 3) Fix body height to avoid content arrangement error due to page zoom setting
+   * 3) Fix body height to avoid content rearrangement due to page zoom settings
    */
   body {
     padding-left: 0;
@@ -282,19 +299,20 @@ h6 {
   /*
    * Because on wide screen the body box is made of different sub content boxes,
    * the old shadows cannot be used, disable old content shadows on wide screen
+   * Grouping and class used here
    */
   h1, .pslo-courses-container, .faculty-container {
     padding: 0;
     background-color:rgba(255,255,255,0.9);
-    align-items: self-start;
     width: auto;
     margin: 0;
     box-shadow: unset;
   }
 
   /*
-   * Use body:before to replace old shadows with a universal shadow of a blank rounded rectangle
-   * which covers all parts of body contents on wide screen
+   * 1) Use body:before to add a blank transparent rounded rectangle
+   * 2) Use the rectangle to add shadow effect which covers all parts of body contents
+   *    on wide screen
    */
   body:before {
     z-index: -1;
@@ -355,9 +373,9 @@ h6 {
     padding: 0 25px;
   }
 
-  @media screen and (min-height: 1360px) {
+  @media screen and (min-height: 1340px) {
     /*
-     * When the screen is more than 1360px tall (and more than 925px wide),
+     * When the screen is more than 1340px tall (and more than 925px wide),
      * stick the validation card to the bottom of the page
      */
     #validation {
