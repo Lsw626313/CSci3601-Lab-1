@@ -64,7 +64,7 @@ body:after {
  */
 @keyframes fadein {
   from {opacity: 1}
-  to {opacity: 0.15}
+  to {opacity: 0.25}
 }
 
 /*
@@ -263,6 +263,9 @@ h6 {
   font-style: italic;
 }
 
+/*
+ * Use a top border to as a cut-off line splitting the pslo and course sections
+ */
 #courses {
   line-height: 1.6;
   font-size: 16px;
