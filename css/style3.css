@@ -86,7 +86,7 @@ h6 {
   font-size: 18px;
 }
 
-@media screen and (max-width: 925px) {
+@media screen and (max-width: 1025px) {
   #style li {
     font-size: 12px;
   }
@@ -132,7 +132,7 @@ img  {
   text-shadow: none;
 }
 
-@media screen and (min-width: 925px) {
+@media screen and (min-width: 1025px) {
   .pslo-courses-container, .faculty-container {
     margin-left: auto;
     margin-right: auto;
@@ -140,13 +140,16 @@ img  {
     flex-direction: column;
     justify-content: center;
     align-items: self-end;
-    width: 800px;
+    width: 1000px;
   }
 
   .pslo-courses-container {
     display: flex;
     flex-direction: row-reverse;
     align-items: stretch;
-    height: 100%;
+  }
+
+  #faculty {
+    width: 970px;
   }
 }
