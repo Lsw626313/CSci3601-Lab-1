@@ -5,29 +5,79 @@ use . in front of the name of a class of things from your html page
 use , to separate a list of things that have some shared css rule
 use float to make something locate itself on the right or left
 
+note:
+rules to grade are bookmarked from 1 to 5
+grouping, nesting, id and class used are bookmarked from A to E
 */
 
-body{
+/*
+ * Use scroll-behavior to add smooth scroll effect when click on navigation bars
+ * to back to the top
+ */
+html {
+  scroll-behavior: smooth;
+}
+
+/*
+ * Please grade this rule (1)
+ * 1) Use url() to import background-image
+ * 2) Set the background color to a similar color from the image
+ * 3) Enable transition effect on top padding to create a shift-down load animation
+ * 4) Set margin 0 so the content border is full screen wide when the screen is narrow
+ */
+body {
   padding: 50px 0 200px;
-  background-color: rgb(244,224,240);
+  background-color: rgb(238,204,236);
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: center;
   margin: 0;
-
   background-image: url("http://pluspng.com/img-png/sakura-flower-png-hd-sakura-flower-1-4288.jpg");
   background-repeat: repeat-y;
   background-attachment: fixed;
+  transition: padding-top 1s;
+  transition-timing-function: ease-out;
 }
 
+/*
+ * Please grade this rule (2)
+ * 1) Use body:after to generate a rectangle between the content and background image
+ * 2) Use the rectangle to create an fadein load animation
+ */
+body:after {
+  content: "";
+  opacity: 1;
+  z-index: -2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  display: block;
+  background-color: rgb(246,226,242);
+  animation: fadein .5s ease 1s forwards;
+}
+
+/*
+ * Create a fadein animation by changing the opacity of an item
+ */
+@keyframes fadein {
+  from {opacity: 1}
+  to {opacity: 0.25}
+}
+
+/*
+ * Use box-shadow to add shadows to the pslo, course and faculty containers
+ * Class and grouping used here
+ */
 .pslo-courses-container, .faculty-container {
   padding: 0;
-  background-color: rgba(255,255,255,0.85);
-  align-items: self-start;
+  background-color: rgba(255,255,255,0.9);
   width: 100%;
   margin-bottom: 50px;
   border-radius: 25px;
+  box-shadow: 0 0 75px grey;
 }
 
 .section h2, li {
@@ -35,26 +85,46 @@ body{
   padding-left: 20px;
 }
 
-.faculty-container img {
-  max-width: 90%;
-  border-radius: 20px;
+.major-element ul li {
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
+.major-element ul {
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+img {
+  max-width: 90%;
+  border-radius: 10%;
+  margin-top: 5px;
+}
+
+/*
+ * Uppercase title and set the font weight to a thin value
+ */
 #main-title {
   color: rgb(95,63,58);
   font-size: 50px;
   text-transform: uppercase;
   padding-left: 20px;
   padding-right: 20px;
-  padding-bottom: 50px;
-
+  padding-bottom: 40px;
   font-weight: 100;
 }
 
 h2 {
   color: rgb(95,63,58);
+  font-size: 24px;
 }
 
+/*
+ * Please grade this rule (3)
+ * 1) Use linear-gradient to create a transparent gradient grey effect on the validation card
+ * 2) Set the width of validation card full screen wide
+ * 3) Apply flex display to centralize the validation card at the bottom of the page
+ */
 #validation {
   display: flex;
   flex-direction: column;
@@ -62,63 +132,121 @@ h2 {
   position: absolute;
   left: 0;
   color: rgb(244,224,240);
-  background-image: linear-gradient(rgba(0,0,0,0), rgba(33,33,33,256));
+  background-image: linear-gradient(rgba(0,0,0,0), rgba(45,30,35,0.95));
   margin-top: 0;
   padding-top: 0;
   width: 100%;
 }
 
-.card-title {
-  font-size: 1.5em;
+/*
+ * Add text shadow on the validation card
+ * Grouping, nesting and id used here
+ */
+h6, #validation p + a {
+  text-shadow: 0 0 50px rgb(50,50,50);
+  font-size: 16px;
+}
+
+/*
+ * Italic the validation title
+ */
+h6 {
+  font-size: 20px;
   font-style: italic;
 }
 
 .card-body {
-  padding: 30px;
+  padding: 10px 30px 30px;
 }
 
+/*
+ * Change validation links colors and add transition effect when mouse hovers
+ * Class and nesting used here
+ */
+.card-text a {
+  color: #ffbbfa;
+  transition: .2s;
+}
+
+.card-text a:hover {
+  color: #a896ff;
+}
+
+/*
+ * Centralize navigation bar buttons
+ * ID and nesting used here
+ */
 #style ul {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
 }
 
-#style li {
-  float: left;
-}
-
-#style li a {
-  display: block;
-  color: rgb(95, 63, 58);;
-  text-align: center;
-  padding: 5px 16px;
-  text-decoration: none;
-  font-size: 75%;
-}
-
-#style li a:hover {
-  background-color: rgb(239, 219, 235);
-  border-radius: 15px;
-}
-
+/*
+ * Add transparent gradient background to the navigation bar
+ */
 #style {
+  z-index: 2;
   position: fixed;
-  background-image: linear-gradient(rgba(244,224,240,255), rgba(0,0,0,0));
+  background-image: linear-gradient(rgb(246, 226, 242), rgba(0,0,0,0));
   left: 0;
   right: 0;
   top: 0;
   height: 75px;
-  padding-top: 10px;
+  padding-top: 4px;
+  padding-bottom: 20px;
 }
 
-#courses>ul>li {
-  display: inline-block;
+#style li {
+  padding: 0 15px;
+}
+
+/*
+ * Please grade this rule (4)
+ * 1) Create rounded buttons to the navigation bar visible when hovered
+ * 2) add hover transition effect to navigation bar buttons
+ */
+#style li a {
+  display: block;
+  color: rgb(95, 63, 58);;
+  text-align: center;
+  padding: 4px 16px;
+  margin: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  white-space: nowrap;
+  border-radius: 15px;
+  transition: background-color .2s, box-shadow .2s;
+  transition-timing-function: ease-out;
+}
+
+/*
+ * Please grade this rule (5)
+ * 1) Use nth-child to create a always-selected effect on the second style button
+ * 2) Change text and background color of the button and add shadow effect
+ * 3) Hover transition animation is still enabled on the button
+ */
+#style li:nth-child(2) a {
+  color: rgba(155,95,118,0.76);;
+  background-color: rgba(255,245,253,0.95);
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.1);
+}
+
+/*
+ * Display buttons to the navigation bar with a shadow with hovered
+ */
+#style li a:hover {
+  background-color: rgb(255,245,253);
+  box-shadow: 0 3px 5px 0 rgba(0,0,0,0.2);
+}
+
+#faculty-list {
+  padding-left: 20px;
 }
 
 #faculty>ul>li {
@@ -128,50 +256,87 @@ h2 {
 }
 
 .office {
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .name {
   font-style: italic;
 }
 
-.pslo, #courses {
+/*
+ * Use a top border as a cut-off line splitting the pslo and course sections
+ */
+#courses {
   line-height: 1.6;
   font-size: 16px;
-}
-
-#courses {
   margin-top: 30px;
   padding-top: 10px;
   margin-bottom: 40px;
   border-top-style: dotted;
+  border-top-color: rgb(220,198,215);
+}
+
+.pslo {
+  line-height: 1.8;
+  font-size: 16px;
 }
 
 @media screen and (min-width: 925px) {
-  @media screen and (min-height: 1290px) {
-    #validation {
-      bottom: 0;
-    }
-  }
-
+  /*
+   * When the screen is more than 925px wide:
+   * 1) Change flex-direction to row to create a different body layout
+   * 2) Enable background image scroll
+   * 3) Fix body height to avoid content rearrangement due to page zoom settings
+   */
   body {
     padding-left: 0;
     margin:0 auto;
     align-items: normal;
     display: flex;
     flex-direction: row;
-    width: 53em;
+    width: 905px;
     background-attachment: scroll;
+    height: 1000px;
   }
 
+  /*
+   * Because on wide screen the body box is made of different sub content boxes,
+   * the old shadows cannot be used, disable old content shadows on wide screen
+   * Grouping and class used here
+   */
   h1, .pslo-courses-container, .faculty-container {
     padding: 0;
     background-color:rgba(255,255,255,0.9);
-    align-items: self-start;
     width: auto;
     margin: 0;
+    box-shadow: unset;
   }
 
+  /*
+   * 1) Use body:before to add a blank transparent rounded rectangle
+   * 2) Use the rectangle to add shadow effect which covers all parts of body contents
+   *    on wide screen
+   */
+  body:before {
+    z-index: -1;
+    content: "";
+    display:block;
+    height: 950px;
+    width: 905px;
+    position: absolute;
+    padding-top: 50px;
+    border-radius: 25px;
+    box-shadow: 0 0 75px grey;
+  }
+
+  .faculty-container {
+    width: 350px;
+  }
+
+  /*
+   * Reset border radius to faculty container and courses container which make up to a big
+   * rounded rectangle background
+   */
   .faculty-container {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
@@ -181,27 +346,44 @@ h2 {
     border-radius: 0;
   }
 
+  /*
+   * Make the main title vertical using writing-mode vertical-lr
+   */
   #main-title {
     border-bottom-left-radius: 25px;
     border-top-left-radius: 25px;
-
-    padding-top: 20px;
-    padding-bottom: 0;
     writing-mode: vertical-lr;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 20px 30px 0;
     margin-left: 0;
     margin-right: 0;
     text-align: left;
     white-space: nowrap;
   }
 
+  /*
+   * Use absolute position to the validation card to make it to the bottom of the page
+   */
   #validation {
     position: absolute;
-    top: 950px;
+    top: 1050px;
   }
 
   .card-body {
-    width: 53em;
+    width: 840px;
+  }
+
+  #style li {
+    padding: 0 25px;
+  }
+
+  @media screen and (min-height: 1340px) {
+    /*
+     * When the screen is more than 1340px tall (and more than 925px wide),
+     * stick the validation card to the bottom of the page
+     */
+    #validation {
+      top: unset;
+      bottom: 0;
+    }
   }
 }
