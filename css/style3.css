@@ -43,7 +43,7 @@ li {
   padding: 5px;
   border: 5px solid;
   margin: 5px;
-  max-width: 100em;
+  max-width: 98.2em;
 }
 
 #pslo {
@@ -57,23 +57,24 @@ li {
     max-width: 100em;
     margin-left: 100px;
   }
+
+  .faculty-container {
+    margin-left: 100px;
+  }
 }
 #courses {
-  background: #18A4D7;
+  background: #1A9AD1;
 }
 #faculty {
   background: #E814F7;
 }
 
 .faculty-list {
-  width: 25%;
   display: table;
   clear: both;
 }
 
-.faculty-container {
-  margin-left: 100px;
-}
+
 
 #validation {
 background: #F71414;
@@ -135,5 +136,4 @@ img  {
 
 .card-text li {
   text-shadow: none;
-
 }
