@@ -50,10 +50,10 @@ li {
   background: #326F0F;
 }
 
-
 #courses {
   background: #1A9AD1;
 }
+
 #faculty {
   background: #E814F7;
 }
@@ -63,12 +63,13 @@ li {
   clear: both;
 }
 
-
-
 #validation {
   background: #F71414;
   max-width: 99.8em;
+}
 
+h6 {
+  font-size: 20px;
 }
 
 #style {
@@ -90,9 +91,11 @@ li {
     font-size: 12px;
   }
 }
+
 #style li a:link {
   text-decoration: none;
 }
+
 #style li a:hover {
   color: #F71414;
   cursor: pointer;
@@ -130,14 +133,20 @@ img  {
 }
 
 @media screen and (min-width: 925px) {
-  .pslo-courses-container {
-    display: inline-flex;
-    flex-direction: row-reverse;
-    max-width: 100em;
-    margin-left: 100px;
+  .pslo-courses-container, .faculty-container {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: self-end;
+    width: 800px;
   }
 
-  .faculty-container {
-    margin-left: 100px;
+  .pslo-courses-container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: stretch;
+    height: 100%;
   }
 }
