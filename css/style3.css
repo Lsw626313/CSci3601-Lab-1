@@ -351,6 +351,8 @@ img {
 
   #faculty-list {
     width: 175px;
+    margin-top: 70px;
+    justify-content: left;
   }
 
   #faculty-list li {
@@ -359,7 +361,8 @@ img {
     width: 150px;
     font-size: 12px;
     border-radius: 21px;
-    margin: 10px 30px;
+    margin: 10px 55px;
+    margin-left: 5px;
     padding-top: 0;
 
   }
@@ -374,7 +377,7 @@ img {
 
   #validation {
     text-align: center;
-    margin-left: 10px;
+    margin-left: 0;
   }
 
   h6 {
