@@ -8,7 +8,7 @@ use float to make something locate itself on the right or left
 
 body {
   padding: 10px;
-  background-image: linear-gradient(#13757F, #753A40);
+  background-image: linear-gradient(#E2C78C, #6BAB85);
   background-attachment: fixed;
   display: flex;
   flex-direction: column;
@@ -28,7 +28,7 @@ h1 {
   padding-right: 25px;
   font-style: italic;
   font-size: 50px;
-  color: #6BAB85;
+  color: #45423E;
   text-shadow: 2px 2px #D1DC9E, 4px 4px #FCF9CD;
 }
 
@@ -39,7 +39,7 @@ h2 {
   font-family: "Lucida Console", Lucida, monospace;
   font-style: italic;
   font-size: 30px;
-  color: #6BAB85;
+  color: #45423E;
   text-shadow: 1px 1px #D1DC9E, 2px 2px #FCF9CD;
 }
 
@@ -60,9 +60,9 @@ li {
   padding: 10px 5px 20px;
   padding-left: 40px;
   border-radius: 20px;
-  border: 4px solid #6BAB85;
-  background-color: #13757F;
-  box-shadow: 2px 2px #D1DC9E, 4px 4px #FCF9CD;
+  border: 4px solid #E2C78C;
+  background-color: #87735E;
+  box-shadow: 2px 2px #FCF9CD, 4px 4px #D1DC9E;
 }
 
 #faculty-list li {
@@ -70,25 +70,25 @@ li {
   flex-direction: column-reverse;
   margin: 20px;
   border-radius: 20px;
-  border: 4px solid #6BAB85;
-  background-color: #13757F;
-  box-shadow: 2px 2px #D1DC9E, 4px 4px #FCF9CD;
+  border: 4px solid #E2C78C;
+  background-color: #87735E;
+  box-shadow: 2px 2px #FCF9CD, 4px 4px #D1DC9E;
+}
+
+#courses>ul, #pslo ol, #faculty-list li {
+  transition: background-color .5s;
 }
 
 #courses>ul:hover {
-  background-color: #4D2C33;
-  transition: background-color .5s;
-
+  background-color: #45423E;
 }
 
 #pslo ol:hover {
-  background-color: #4D2C33;
-  transition: background-color .5s;
+  background-color: #45423E;
 }
 
 #faculty-list li:hover {
-  background-color: #4D2C33;
-  transition: background-color .5s;
+  background-color: #45423E;
 }
 
 #faculty-list {
@@ -115,6 +115,11 @@ h6 {
   font-size: 20px;
 }
 
+.card-text a, .card-text>li {
+  color: #87735E;
+  text-shadow: unset;
+}
+
 #style {
   position: absolute;
   left: 0;
@@ -136,12 +141,12 @@ h6 {
   z-index: 2;
   width: 100%;
   display: block;
-  font-size: 22px;
+  font-size: 30px;
   font-style: italic;
   text-transform: lowercase;
   text-decoration: none;
   font-family: "Lucida Console", Lucida, monospace;
-  color: #6BAB85;
+  color: #45423E;
   text-shadow: 1px 1px #D1DC9E, 2px 2px #FCF9CD;
   padding: 5px 10px;
 }
@@ -151,17 +156,17 @@ h6 {
 }
 
 #style ul li:nth-child(3) a {
-  font-size: 40px;
+  font-size: 30px;
   animation: ease-out colors .5s infinite;
   animation-direction: alternate-reverse;
 }
 
 @keyframes colors {
-  from {color: #DA4C4F;} to {color: #6BAB85;}
+  from {color: #E2C78C;} to {color: #45423E;}
 }
 
 #style li a:hover {
-  color: lawngreen;
+  color: #87735E;
   cursor: pointer;
 }
 
@@ -195,7 +200,7 @@ img {
   font-size: 20px;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 950px) {
   .pslo-courses-container ul>li, .pslo, .name, .office {
     font-size: 110%;
   }
@@ -205,22 +210,18 @@ img {
     margin-right: auto;
   }
 
-  h1 {
-    width: 300px;
-    font-size: 55px;
-    text-align: left;
-  }
-
   #style {
+    top: unset;
+    bottom: 75px;
+    right: unset;
     position: fixed;
   }
 
   #main-title {
-
     padding-left: unset;
     position: fixed;
-    top: 20px;
-    left: 20px;
+    left: 25px;
+    margin-top: 60px;
   }
 
   .faculty-container {
@@ -247,10 +248,18 @@ img {
     flex-direction: column;
     align-items: stretch;
     width: 500px;
+    padding-top: 0;
+    margin-top: 50px;
+  }
+
+  .faculty-container {
+    padding-top: 0;
+    margin-top: 40px;
   }
 
   #faculty {
     padding: 0;
+    margin-top: 20px;
     width: 200px;
     align-content: end;
     border: unset;
@@ -262,8 +271,10 @@ img {
   }
 
   #faculty h2 {
-    padding-top: 10px;
+    padding-top: 0;
     text-align: left;
+    width: 150px;
+    margin-right: 0;
   }
 
   img {
@@ -271,17 +282,26 @@ img {
     width: 75%;
     border-radius: 50%;
     margin: 10px auto;
-    transition: width .5s, border-radius .2s, margin-top .5s;
+    transition: width .5s, border-radius .2s, margin-top .5s, margin-bottom .5s;
   }
 
   img:hover {
     width: 100%;
     border-radius: 18px;
     margin-top: 0;
+    margin-bottom: 0;
   }
 
   h1 {
     margin-bottom: 70px;
+    width: 300px;
+    font-size: 55px;
+    text-align: left;
+    text-shadow: 1px 1px #D1DC9E, 2px 2px #FCF9CD, 0 50px 4px #a18971, 0 100px 10px #FCF9CD;
+  }
+
+  #faculty-list {
+    width: 175px;
   }
 
   #faculty-list li {
@@ -304,13 +324,11 @@ img {
   }
 
   #validation {
-    position: fixed;
-    bottom: 10px;
-    left: 5px;
-    width: 270px;
+    text-align: center;
   }
 
   h6 {
     margin-bottom: 0;
+    margin-top: 0;
   }
 }
