@@ -9,6 +9,7 @@ use float to make something locate itself on the right or left
 body {
   padding: 10px;
   background-image: linear-gradient(#E2C78C, #6BAB85);
+  background-color: #6BAB85;
   background-attachment: fixed;
   display: flex;
   flex-direction: column;
