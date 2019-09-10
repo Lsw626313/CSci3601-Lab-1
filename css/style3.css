@@ -62,9 +62,6 @@ li {
   max-width: 98.2em;
 }
 
-/*
- * ID, grouping, and nesting are used here
- */
 #pslo ol, #courses>ul {
   margin-top: 20px;
   padding: 10px 5px 20px;
@@ -88,7 +85,7 @@ li {
 /*
  * Please grade this rule [1]
  *
- * Apply change-background-color transition when hovers on body content boxes
+ * Apply change-background-color transition when hovering on body content boxes
  *
  * ID, grouping, and nesting are used here
  */
@@ -221,6 +218,9 @@ img {
   border-radius: 20px;
 }
 
+/*
+ * Class and grouping are used here
+ */
 .office, .name {
   text-align: center;
   font-size: 20px;
