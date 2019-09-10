@@ -4,10 +4,6 @@ use # in front of the name of an id from your html page
 use . in front of the name of a class of things from your html page
 use , to separate a list of things that have some shared css rule
 use float to make something locate itself on the right or left
-
-note:
-rules to grade are bookmarked from 1 to 5
-grouping, nesting, id and class used are bookmarked from A to E
 */
 
 /*
@@ -19,7 +15,8 @@ html {
 }
 
 /*
- * Please grade this rule (1)
+ * Please grade this rule [1]
+ *
  * 1) Use url() to import background-image
  * 2) Set the background color to a similar color from the image
  * 3) Enable transition effect on top padding to create a shift-down load animation
@@ -41,7 +38,8 @@ body {
 }
 
 /*
- * Please grade this rule (2)
+ * Please grade this rule [2]
+ *
  * 1) Use body:after to generate a rectangle between the content and background image
  * 2) Use the rectangle to create an fadein load animation
  */
@@ -68,8 +66,9 @@ body:after {
 }
 
 /*
+ * Class and grouping are used here
+ *
  * Use box-shadow to add shadows to the pslo, course and faculty containers
- * Class and grouping used here
  */
 .pslo-courses-container, .faculty-container {
   padding: 0;
@@ -120,7 +119,8 @@ h2 {
 }
 
 /*
- * Please grade this rule (3)
+ * Please grade this rule [3]
+ *
  * 1) Use linear-gradient to create a transparent gradient grey effect on the validation card
  * 2) Set the width of validation card full screen wide
  * 3) Apply flex display to centralize the validation card at the bottom of the page
@@ -139,8 +139,9 @@ h2 {
 }
 
 /*
+ * Grouping, nesting, and ID are used here
+ *
  * Add text shadow on the validation card
- * Grouping, nesting and id used here
  */
 h6, #validation p + a {
   text-shadow: 0 0 50px rgb(50,50,50);
@@ -160,8 +161,9 @@ h6 {
 }
 
 /*
+ * Class and nesting are used here
+ *
  * Change validation links colors and add transition effect when mouse hovers
- * Class and nesting used here
  */
 .card-text a {
   color: #ffbbfa;
@@ -173,8 +175,9 @@ h6 {
 }
 
 /*
+ * ID and nesting are used here
+ *
  * Centralize navigation bar buttons
- * ID and nesting used here
  */
 #style ul {
   display: flex;
@@ -188,7 +191,8 @@ h6 {
 }
 
 /*
- * Add transparent gradient background to the navigation bar
+ * 1) Change navigation bar layout
+ * 2) Add transparent gradient background to the navigation bar
  */
 #style {
   z-index: 2;
@@ -207,7 +211,8 @@ h6 {
 }
 
 /*
- * Please grade this rule (4)
+ * Please grade this rule [4]
+ *
  * 1) Create rounded buttons to the navigation bar visible when hovered
  * 2) add hover transition effect to navigation bar buttons
  */
@@ -226,7 +231,8 @@ h6 {
 }
 
 /*
- * Please grade this rule (5)
+ * Please grade this rule [5]
+ *
  * 1) Use nth-child to create a always-selected effect on the second style button
  * 2) Change text and background color of the button and add shadow effect
  * 3) Hover transition animation is still enabled on the button
@@ -300,9 +306,10 @@ h6 {
   }
 
   /*
+   * Grouping and class are used here
+   *
    * Because on wide screen the body box is made of different sub content boxes,
    * the old shadows cannot be used, disable old content shadows on wide screen
-   * Grouping and class used here
    */
   h1, .pslo-courses-container, .faculty-container {
     padding: 0;
