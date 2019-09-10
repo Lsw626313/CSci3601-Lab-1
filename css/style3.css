@@ -227,7 +227,7 @@ img {
   font-size: 20px;
 }
 
-@media screen and (min-width: 950px) {
+@media screen and (min-width: 965px) {
   /*
    * Please grade this rule [3]
    *
@@ -264,6 +264,7 @@ img {
   }
 
   #main-title {
+    z-index: -1;
     position: fixed;
     padding-left: 10px;
     left: 4%;
